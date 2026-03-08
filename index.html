@@ -4,20 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prompt Advisers – AI Consultancy</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300D4AA'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='18' fill='%230a0a0f'>P</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">Prompt<span>Advisers</span></a>
-      <nav class="nav__links">
+      <a href="#" class="nav__logo">
+        <span class="logo__prompt">PROMPT</span>
+        <span class="logo__advisers">ADVISERS</span>
+      </a>
+      <nav class="nav__links nav__links--hidden">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        <a href="#contact" class="btn btn--primary">Get in Touch</a>
       </nav>
       <button class="nav__burger" id="burger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -32,81 +37,108 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero__bg"></div>
-    <div class="container hero__content">
-      <p class="hero__eyebrow">AI Consultancy</p>
-      <h1 class="hero__title">Turn AI Potential<br />into <span class="gradient-text">Real Results</span></h1>
-      <p class="hero__sub">Prompt Advisers helps forward-thinking companies design, implement and scale AI strategies that create lasting competitive advantage.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary">Start a Conversation</a>
-        <a href="#services" class="btn btn--ghost">Explore Services</a>
+    <div class="hero__bokeh" id="heroBokeh"></div>
+    <div class="hero__content" id="heroContent">
+      <h1 class="hero__title anim-fade-up">
+        <span class="hero__title-line">REDEFINING</span>
+        <span class="hero__title-line hero__title--gradient">AI POTENTIAL</span>
+        <span class="hero__title-line">FOR THE FUTURE</span>
+      </h1>
+      <p class="hero__sub anim-fade-up anim-delay-1">We architect tomorrow's intelligence today</p>
+      <div class="hero__actions anim-fade-up anim-delay-2">
+        <a href="#contact" class="btn btn--engage">ENGAGE</a>
+        <a href="#services" class="hero__explore">
+          <span class="hero__explore-line"></span>
+          <span>EXPLORE</span>
+        </a>
       </div>
     </div>
-    <div class="hero__scroll-hint">
-      <span></span>
+    <div class="hero__scroll-indicator">
+      <span class="scroll-text">SCROLL</span>
+      <span class="scroll-line"></span>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section class="services" id="services">
-    <div class="container">
-      <p class="section-eyebrow">What We Do</p>
+    <div class="services__header reveal">
+      <p class="eyebrow">What We Do</p>
       <h2 class="section-title">Our Services</h2>
-      <p class="section-sub">From first exploration to full deployment, we guide you at every step of your AI journey.</p>
-      <div class="services__grid">
+    </div>
+    <div class="services__grid">
 
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+      <article class="service-card reveal">
+        <div class="service-card__img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="AI Strategy" loading="lazy" />
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
           </div>
-          <h3>AI Strategy &amp; Roadmapping</h3>
-          <p>We audit your current workflows, identify high-impact opportunities and build a phased AI roadmap aligned with your business goals.</p>
         </div>
+        <h3>AI Strategy & Roadmapping</h3>
+        <p>We audit your workflows, identify high-impact opportunities and build a phased AI roadmap aligned with your business goals.</p>
+      </article>
 
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      <article class="service-card reveal">
+        <div class="service-card__img">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80" alt="Prompt Engineering" loading="lazy" />
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
           </div>
-          <h3>Prompt Engineering</h3>
-          <p>Unlock the full potential of large language models with expertly crafted prompts, fine-tuned for your industry, tone and use case.</p>
         </div>
+        <h3>Prompt Engineering</h3>
+        <p>Unlock the full potential of large language models with expertly crafted prompts, fine-tuned for your industry and use case.</p>
+      </article>
 
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <article class="service-card reveal">
+        <div class="service-card__img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="AI Implementation" loading="lazy" />
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
-          <h3>AI Implementation</h3>
-          <p>Hands-on integration of AI tools and APIs into your existing stack — delivered on time, on budget and ready to scale.</p>
         </div>
+        <h3>AI Implementation</h3>
+        <p>Hands-on integration of AI tools and APIs into your existing stack — delivered on time, on budget and ready to scale.</p>
+      </article>
 
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      <article class="service-card reveal">
+        <div class="service-card__img">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="Team Training" loading="lazy" />
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
-          <h3>Team Training &amp; Upskilling</h3>
-          <p>Practical workshops and coaching programmes to make your team AI-fluent — from executives setting direction to operators using tools daily.</p>
         </div>
+        <h3>Team Training & Upskilling</h3>
+        <p>Practical workshops and coaching programmes to make your team AI-fluent — from executives to daily operators.</p>
+      </article>
 
-      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="about">
-    <div class="container about__inner">
-      <div class="about__visual">
-        <div class="about__blob"></div>
-        <div class="about__stats">
-          <div class="stat"><span class="stat__number">50+</span><span class="stat__label">Projects delivered</span></div>
-          <div class="stat"><span class="stat__number">30+</span><span class="stat__label">Happy clients</span></div>
-          <div class="stat"><span class="stat__number">5+</span><span class="stat__label">Years in AI</span></div>
-        </div>
+    <div class="about__inner">
+      <div class="about__image reveal">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Our team collaborating" loading="lazy" />
       </div>
-      <div class="about__text">
-        <p class="section-eyebrow">About Us</p>
+      <div class="about__content reveal">
+        <p class="eyebrow">About Us</p>
         <h2 class="section-title">Advisers, Not Just Consultants</h2>
-        <p>At Prompt Advisers, we believe AI should work for your business — not the other way around. We are a boutique consultancy of AI practitioners, strategists and engineers who have helped companies across finance, healthcare, retail and media navigate the AI landscape with clarity and confidence.</p>
-        <p>We stay in the trenches with you: from scoping sessions to post-launch optimisation, we are a long-term partner invested in your success.</p>
+        <div class="about__stats" id="aboutStats">
+          <div class="stat">
+            <span class="stat__number" data-target="50">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">Projects delivered</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="30">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">Happy clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="5">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">Years in AI</span>
+          </div>
+        </div>
+        <p class="about__text">We are a boutique consultancy of AI practitioners, strategists and engineers who have helped companies across finance, healthcare, retail and media navigate the AI landscape with clarity and confidence.</p>
+        <blockquote class="pull-quote">We stay in the trenches with you: from scoping sessions to post-launch optimisation, we are a long-term partner invested in your success.</blockquote>
         <a href="#contact" class="btn btn--primary">Work With Us</a>
       </div>
     </div>
@@ -114,12 +146,11 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="container">
-      <p class="section-eyebrow">Get in Touch</p>
-      <h2 class="section-title">Let's Talk AI</h2>
-      <p class="section-sub">Tell us about your project and we'll get back to you within one business day.</p>
-      <form class="contact__form" id="contactForm" novalidate>
-        <div class="form__row">
+    <div class="contact__glow"></div>
+    <div class="contact__inner reveal">
+      <h2 class="section-title">Let's Build Something Remarkable.</h2>
+      <div class="contact__card">
+        <form class="contact__form" id="contactForm" novalidate>
           <div class="form__group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Jane Smith" required />
@@ -128,25 +159,30 @@
             <label for="email">Work Email</label>
             <input type="email" id="email" name="email" placeholder="jane@company.com" required />
           </div>
-        </div>
-        <div class="form__group">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Acme Corp" />
-        </div>
-        <div class="form__group">
-          <label for="message">What are you looking to achieve?</label>
-          <textarea id="message" name="message" rows="5" placeholder="Briefly describe your challenge or goal…" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-        <p class="form__success" id="formSuccess">Thanks! We'll be in touch shortly.</p>
-      </form>
+          <div class="form__group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" />
+          </div>
+          <div class="form__group">
+            <label for="message">What are you looking to achieve?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your challenge or goal..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form__success" id="formSuccess">Thanks! We'll be in touch shortly.</p>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <a href="#" class="nav__logo">Prompt<span>Advisers</span></a>
+    <div class="footer__inner">
+      <a href="#" class="nav__logo">Prompt Advisers</a>
+      <div class="footer__links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
       <p class="footer__copy">&copy; 2025 Prompt Advisers. All rights reserved.</p>
     </div>
   </footer>
